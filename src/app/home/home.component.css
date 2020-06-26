@@ -1,0 +1,7 @@
+.main-container.collapsed {
+    margin-left: 22em;
+    border: solid 1px blue;
+    
+    padding-top: 10%;
+    /*PATCH BARRA*/
+}

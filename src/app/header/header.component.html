@@ -1,0 +1,20 @@
+  <div class='header'>
+    <h5> 
+      <em class="fa fa-home"></em>  
+         <a [routerLink]="['/users']">Cambia Ruolo</a>&nbsp;
+         <em class="fa fa-tachometer"></em>  
+         <a [routerLink]="['/todos']">Portale area privata</a>&nbsp;
+         <em class="fa fa-sign-out"></em>  
+         <a [routerLink]="['/login']">Esci</a>&nbsp;
+     </h5>
+
+
+    <div id="barra_istituzionale" class="clearfix ng-scope">
+	    <a class="menu-toggle" (click)="handleclick($event)"> <span class="fa fa-bars"></span> </a>
+	    <a href="http://www.regione.lombardia.it">
+		   <img src="assets/logo_regione_restyling.png" alt="Regione Lombardia" class="logo">
+	    </a>
+	   <h3 class="title">FENICE RIMBORSI TASSA AUTO</h3>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
