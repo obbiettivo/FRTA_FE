@@ -5,10 +5,7 @@
       <div class="side-menu-container" [hidden]="!show" >
         <app-menu-left ></app-menu-left>
       </div>
-      <div    [ngClass]="{
-        'main-container': show,
-        'main-container.collapsed': !show
-      }">
+        <div [ngClass]="{ 'main-container': show, 'main-container.collapsed': !show }">
         <div class="container-fluid withHeader">
             <app-home></app-home>
         </div>

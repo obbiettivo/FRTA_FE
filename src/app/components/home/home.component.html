@@ -1,9 +1,87 @@
+<div class="container">
+  <div  [hidden]="submitted">
+    <h3 class="title">GESTIONE FLUSSI RIMBORSI TASSA AUTO</h3>
+    <div class="row">&nbsp;</div>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
-    <p><b>Armata del Nord</b> (in <a href="/wiki/Lingua_francese" title="Lingua francese">francese</a>: <i><b>Armée du Nord</b></i>) fu il nome dato a diverse unità storiche dell'<a href="/wiki/Arm%C3%A9e_de_terre" title="Armée de terre">esercito francese</a>.
-    </p><p>La prima di queste armate fu creata il 14 dicembre <a href="/wiki/1791" title="1791">1791</a> durante la <a href="/wiki/Rivoluzione_francese" title="Rivoluzione francese">rivoluzione francese</a> e combatté distinguendosi durante la guerra della <a href="/wiki/Prima_coalizione" title="Prima coalizione">prima coalizione</a> tra il 1792 e il 1795. Esisté con tale denominazione fino al 1797; tra le armate che si distinsero contro l'Europa dei coalizzati, fu quella del Nord a sopportare gran parte del peso delle battaglie tra il 1792 e il 1793.
-    </p><p>Il primo comandante nominato nel momento della creazione dell'Armata del Nord fu <a href="/wiki/Jean-Baptiste_Donatien_de_Vimeur_de_Rochambeau" title="Jean-Baptiste Donatien de Vimeur de Rochambeau">Jean-Baptiste Donatien de Vimeur de Rochambeau</a>, ma il sospettoso governo della <a href="/wiki/Prima_Repubblica_francese" title="Prima Repubblica francese">Prima Repubblica francese</a> lo accusò presto di tradimento e l'ex comandante sfuggì solo fortunosamente all'esecuzione. Tra il 1792 e il 1794 la <a href="/wiki/Ghigliottina" title="Ghigliottina">ghigliottina</a> avrebbe poi atteso altri comandanti che avevano fallito il loro compito, appartenevano semplicemente alla nobiltà o avevano dimostrato insufficiente zelo rivoluzionario. Sotto il comando di <a href="/wiki/Charles_Fran%C3%A7ois_Dumouriez" title="Charles François Dumouriez">Charles François Dumouriez</a>, l'Armata del Nord contribuì a sventare l'invasione <a href="/wiki/Regno_di_Prussia" title="Regno di Prussia">prussiana</a> della <a href="/wiki/Francia" title="Francia">Francia</a> nella <a href="/wiki/Battaglia_di_Valmy" title="Battaglia di Valmy">battaglia di Valmy</a> il 20 settembre 1792, e costituì inoltre una gran parte del contingente di truppe che Dumouriez stesso utilizzò nell'invasione del <a href="/wiki/Belgio" title="Belgio">Belgio</a> a danno degli <a href="/wiki/Sacro_Romano_Impero" title="Sacro Romano Impero">austriaci</a> e che portò alla vittoria nella <a href="/wiki/Battaglia_di_Jemappes" title="Battaglia di Jemappes">battaglia di Jemappes</a> il 6 novembre 1792; il 18 marzo 1793 gli austriaci tuttavia sconfissero Dumouriez nella <a href="/wiki/Battaglia_di_Neerwinden_(1793)" title="Battaglia di Neerwinden (1793)">battaglia di Neerwinden</a> e questi, rischiando la ghigliottina, si consegnò al nemico.
-    </p><p>Dopo le sconfitte nella <a href="/wiki/Battaglia_di_Raismes" title="Battaglia di Raismes">battaglia di Raismes</a> l'8 maggio e nella <a href="/wiki/Battaglia_di_Famars" title="Battaglia di Famars">battaglia di Famars</a> il 23 maggio, sotto la guida del generale <a href="/wiki/Charles_%C3%89douard_Jennings_de_Kilmaine" title="Charles Édouard Jennings de Kilmaine">Charles Édouard Jennings de Kilmaine</a> l'Armata si scontrò con l'esercito della coalizione al <i>Camp de César</i>, nei pressi di <a href="/wiki/Cambrai" title="Cambrai">Cambrai</a>, il 7 agosto: nonostante il relativo successo e il salvataggio dell'intera Armata dall'annientamento, anche Kilmaine fu accusato di tradimento e sostituito. Sotto il generale <a href="/wiki/Jean_Nicolas_Houchard" title="Jean Nicolas Houchard">Jean Nicolas Houchard</a> l'Armata sconfisse i coalizzati nella <a href="/wiki/Battaglia_di_Hondschoote" title="Battaglia di Hondschoote">battaglia di Hondschoote</a> in settembre, anche se il comandante fu nuovamente sostituito e successivamente giustiziato per non aver sfruttato la vittoria; il suo posto fu preso da <a href="/wiki/Jean-Baptiste_Jourdan" title="Jean-Baptiste Jourdan">Jean-Baptiste Jourdan</a> che, nonostante la vittoria nella <a href="/wiki/Battaglia_di_Wattignies" title="Battaglia di Wattignies">battaglia di Wattignies</a> nell'ottobre 1793, fu accusato di non aver adeguatamente protetto la Francia e destituito dal comando.
-    </p><p>Il 9 febbraio 1794 il comando dell'Armata del Nord passò nelle mani del generale <a href="/wiki/Jean-Charles_Pichegru" title="Jean-Charles Pichegru">Jean-Charles Pichegru</a>, ma questi era assente quando, tra il 17 e il 18 maggio 1794, la sua armata colse un'importante vittoria nella <a href="/wiki/Battaglia_di_Tourcoing" title="Battaglia di Tourcoing">battaglia di Tourcoing</a> sotto la guida temporanea di <a href="/wiki/Joseph_Souham" title="Joseph Souham">Joseph Souham</a> e <a href="/wiki/Jean_Victor_Marie_Moreau" title="Jean Victor Marie Moreau">Jean Victor Marie Moreau</a>. L'ala destra dell'Armata combatté quindi sotto Jourdan nella vittoriosa <a href="/wiki/Battaglia_di_Fleurus_(1794)" title="Battaglia di Fleurus (1794)">battaglia di Fleurus</a> il 26 giugno. Poco dopo la posizione degli alleati nelle <a href="/wiki/Fiandre" title="Fiandre">Fiandre</a> crollò con la conseguente perdita per l'Austria del Belgio e la caduta della <a href="/wiki/Repubblica_delle_Sette_Province_Unite" title="Repubblica delle Sette Province Unite">Repubblica delle Sette Province Unite</a> nell'inverno del 1794-1795; durante questo periodo, l'Armata fu impegnata in operazioni di rastrellamento e assedi per il consolidamento della dominazione francese nei <a href="/wiki/Paesi_Bassi_(regione_storica)" title="Paesi Bassi (regione storica)">Paesi Bassi</a>. Il 25 ottobre 1797 l'Armata del Nord cessò ufficialmente di esistere mentre le sue truppe divennero un esercito di occupazione nella <a href="/wiki/Repubblica_Batava" title="Repubblica Batava">Repubblica Batava</a> appena creata.
-    </p><p>Altre unità omonime operarono durante la <a href="/wiki/Guerra_d%27indipendenza_spagnola" title="Guerra d&#39;indipendenza spagnola">guerra d'indipendenza spagnola</a>, i <a href="/wiki/Cento_giorni" title="Cento giorni">cento giorni</a> e la <a href="/wiki/Guerra_franco-prussiana" title="Guerra franco-prussiana">guerra franco-prussiana</a>.
-    </p>
-    <dl><dt><a href="/wiki/Arm%C3%A9e_du_Nord_(guerre_rivoluzionarie_francesi)" title="Armée du Nord (guerre rivoluzionarie francesi)">Leggi la voce</a> · <a href="/wiki/Wikipedia:Vetrina" title="Wikipedia:Vetrina">Tutte le voci in vetrina</a></dt></dl>   
+   <div class="row">
+      <div class="form-group" class="col-md-4">
+        <label for="name">ID messaggio SEPA</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"  #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger"> Id is required </div>
+      </div>
+
+
+       <div class="form-group" class="col-md-4">
+        <label for="power">Stato flusso</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model.power" name="power"
+                #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+       </div>
+
+        <div class="form-group" class="col-md-4">
+        <label for="power">Tipo flusso</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model.power" name="power"
+                #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">Power is required</div>
+       </div>
+
+
+</div>
+	
+	<div class="row">&nbsp;</div>
+   	<div class="row">
+   	  	<div class="form-group" class="col-md-4">
+        	<label for="power">Data di inizio</label>
+			<input type="text" ngbDatepicker #d="ngbDatepicker"/>
+		</div>
+		<div class="form-group" class="col-md-4">
+        	<label for="power"></label>
+
+		</div>
+		<div class="form-group" class="col-md-4">
+        	<label for="power">Data di fine</label>
+			<input type="text" ngbDatepicker #d="ngbDatepicker"/>
+		</div>
+	</div>
+
+   <div class="row">
+   	   	<div class="form-group" class="col-md-6">
+        	<ngb-datepicker #d></ngb-datepicker>
+		</div>
+   	   	<div class="form-group" class="col-md-6">
+        	<ngb-datepicker #d></ngb-datepicker>
+		</div>
+	</div>
+
+	<div class="row">&nbsp;</div>
+     <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Cerca</button>
+	      &nbsp;&nbsp;
+      <button type="button" class="btn btn-primary" (click)="newHero(); heroForm.reset()">Svuota</button>
+      <!--i>with</i> reset-->
+
+      &nbsp;&nbsp;
+      <!--button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
+      <i>without</i> reset
+
+      <div class="row">&nbsp;</div-->	
+
+     <!-- NOT SHOWN IN DOCS -->
+      <div>
+        <hr>
+        Name via form.controls = {{showFormControls(heroForm)}}
+      </div>
+     <!-- - -->
+    </form>
+  </div>
+

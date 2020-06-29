@@ -10,6 +10,9 @@ import { MenuLeftComponent } from './components/menu-left/menu-left.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { FormsModule }   from '@angular/forms';
+
+
 
 import { NavService} from './services/nav.service'; 
 
@@ -25,7 +28,8 @@ import { NavService} from './services/nav.service';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [NavService],
   bootstrap: [AppComponent]
