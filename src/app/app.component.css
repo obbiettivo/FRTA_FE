@@ -1,0 +1,44 @@
+.toolbar{
+    background-color:cyan;
+    text-align: center;
+   
+}
+
+.header{
+    background-color:transparent;
+    text-align: center;
+}
+
+.side-menu-container {
+    background-color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: fixed;
+    width: 22em;
+    top: 8em;
+    overflow-y: auto;
+    bottom: 0px;
+
+    border: 1px solid green;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+
+    border: 1px solid blue;
+}
+
+.main-container{
+   margin-left: 22em;
+}
+
+.main-container.collapsed {
+    margin-left: 0em;
+}
+
+.withHeader {
+    padding-top: 10%;
+}

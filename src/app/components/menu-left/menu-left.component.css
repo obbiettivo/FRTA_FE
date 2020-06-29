@@ -1,0 +1,109 @@
+#sidebar-wrapper {
+
+    background: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+    
+    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    width: 20em;
+    top: 8em;
+    overflow-y: auto;
+    bottom: 0;
+
+    /*border: green 1px solid;*/
+  }
+
+.subtitlemenu {
+  background-color: transparent;
+  color: #007E41;
+  border: none;
+  font-size: 16px;
+  padding: 1em 2em;
+}
+
+
+/*RESTYLING START*/
+.side-menu-container {
+  background-color: white;
+  padding-left: 0;
+  padding-right: 0;
+  position: fixed;
+  width: 22em;
+  top: 8em;
+  overflow-y: auto;
+  bottom: 0;
+}
+
+
+.welcome-page-wrapper {
+  padding-bottom: 10em;
+}
+
+.content-wrapper>form>div {
+  margin-bottom: 1em;
+}
+
+/**********************/
+/*** Menu verticale ***/
+/**********************/
+
+/*RESTYLING START*/
+.main_menu_verticale {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+.main_menu_verticale hr {
+  margin: 0 2em;
+}
+
+.main_menu_verticale .list-group-item {
+  background-color: transparent;
+  color: #007E41;
+  border: none;
+  font-size: 16px;
+  padding: 1em 2em;
+}
+
+.main_menu_verticale .list-group-item .bold {
+  font-weight: 600;
+}
+
+.main_menu_verticale .list-group-item.selected {
+  color: #007E41;
+  border-left: 8px solid #44B559;
+  background-color: #eaf4ec;
+  font-weight: 600;
+  padding-left: 1.5em;
+}
+
+.main_menu_verticale .list-group-item:not(.selected):hover {
+  background-color: #eaf4ec2b;
+}
+
+.main_menu_verticale .list-group-item.dark {
+  background-color: #003A60;
+  color: #ffffff;
+}
+.main_menu_verticale .list-group-item:not(.selected):hover ,
+.main_menu_verticale .list-group-item:not(.selected):active ,
+.main_menu_verticale .list-group-item:not(.selected):active > a,
+.main_menu_verticale .list-group-item:not(.selected):hover > a {
+  color: #007E41;
+  text-decoration: underline;
+}
+/*RESTYLING END*/
+
+.main_menu_verticale .list-group-item > a:active,
+.main_menu_verticale .list-group-item > a:focus,
+
+#subtitlemenu {
+  margin-left:1em;
+  font-size: 14px;
+}
