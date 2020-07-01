@@ -67,9 +67,9 @@
 <div class="row">&nbsp;</div>
 
 	<div class="row">&nbsp;</div>
-     <button type="submit" class="btn btn-success" [disabled]="!tassaAutoForm.form.valid">Cerca</button>
+     <button type="submit" class="btn btn-success" [disabled]="!tassaAutoForm.form.valid" (click)="InviaRicerca();" >Cerca</button>
 	      &nbsp;&nbsp;
-      <button type="button" class="btn btn-primary" (click)="TassaAuto(); tassaAutoForm.reset()">Svuota</button>
+      <button type="button" class="btn btn-primary" (click)="Pulisci(); tassaAutoForm.reset()">Svuota</button>
       <!--i>with</i> reset-->
 
       &nbsp;&nbsp;
