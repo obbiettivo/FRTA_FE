@@ -2,7 +2,7 @@
   <div  [hidden]="submitted">
     <h3 class="title">GESTIONE FLUSSI RIMBORSI TASSA AUTO</h3>
     <div class="row">&nbsp;</div>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #tassaAutoForm="ngForm">
 
    <div class="row">
       <div class="form-group" class="col-md-4">
@@ -13,61 +13,63 @@
 
 
        <div class="form-group" class="col-md-4">
-        <label for="power">Stato flusso</label>
-        <select class="form-control" id="power"
-                required
-                [(ngModel)]="model.power" name="power"
-                #power="ngModel">
-          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        <label for="statoFlusso">Stato flusso</label>
+        <select class="form-control" id="statoFlusso" required [(ngModel)]="model.statoFlusso" name="statoFlusso"  #statoFlusso="ngModel">
+          <option *ngFor="let flusso of statoFlussi" [value]="flusso">{{flusso}}</option>
         </select>
-        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
-          Power is required
+        <div [hidden]="statoFlusso.valid || statoFlusso.pristine" class="alert alert-danger">
+          statoFlusso is required
         </div>
        </div>
 
-        <div class="form-group" class="col-md-4">
-        <label for="power">Tipo flusso</label>
-        <select class="form-control" id="power"
-                required
-                [(ngModel)]="model.power" name="power"
-                #power="ngModel">
-          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+       <div class="form-group" class="col-md-4">
+        <label for="tipoFlusso">Tipo flusso</label>
+        <select class="form-control" id="tipoFlusso" required [(ngModel)]="model.tipoFlusso" name="tipoFlusso"  #tipoFlusso="ngModel">
+          <option *ngFor="let flusso of tipoFlussi" [value]="flusso">{{flusso}}</option>
         </select>
-        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">Power is required</div>
+        <div [hidden]="tipoFlusso.valid || tipoFlusso.pristine" class="alert alert-danger">
+          tipoFlusso is required
+        </div>
        </div>
-
-
 </div>
 	
 	<div class="row">&nbsp;</div>
    	<div class="row">
-   	  	<div class="form-group" class="col-md-4">
-        	<label for="power">Data di inizio</label>
-			<input type="text" ngbDatepicker #d="ngbDatepicker"/>
-		</div>
-		<div class="form-group" class="col-md-4">
-        	<label for="power"></label>
+     
+      <form class="form-inline">
+        
+        <div class="form-group" class="col-md-6">
+          <label for="dataInizio">Data di inizio</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="dd/mm/yyyy"
+                   name="dpInizio" [(ngModel)]="model.dataInizio" ngbDatepicker #dInizio="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="fa fa-calendar"  (click)="dInizio.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
 
-		</div>
-		<div class="form-group" class="col-md-4">
-        	<label for="power">Data di fine</label>
-			<input type="text" ngbDatepicker #d="ngbDatepicker"/>
-		</div>
-	</div>
+  
+      <div class="form-group" class="col-md-6">
+        <label for="dataFine">Data di fine</label>
+          <div class="input-group">
+          <input class="form-control" placeholder="dd/mm/yyyy"
+                 name="dpFine" [(ngModel)]="model.dataFine" ngbDatepicker #dFine="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="fa fa-calendar"  (click)="dFine.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
 
-   <div class="row">
-   	   	<div class="form-group" class="col-md-6">
-        	<ngb-datepicker #d></ngb-datepicker>
-		</div>
-   	   	<div class="form-group" class="col-md-6">
-        	<ngb-datepicker #d></ngb-datepicker>
-		</div>
-	</div>
+</div>
+
+<div class="row">&nbsp;</div>
 
 	<div class="row">&nbsp;</div>
-     <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Cerca</button>
+     <button type="submit" class="btn btn-success" [disabled]="!tassaAutoForm.form.valid">Cerca</button>
 	      &nbsp;&nbsp;
-      <button type="button" class="btn btn-primary" (click)="newHero(); heroForm.reset()">Svuota</button>
+      <button type="button" class="btn btn-primary" (click)="TassaAuto(); tassaAutoForm.reset()">Svuota</button>
       <!--i>with</i> reset-->
 
       &nbsp;&nbsp;
@@ -76,12 +78,14 @@
 
       <div class="row">&nbsp;</div-->	
 
-     <!-- NOT SHOWN IN DOCS -->
+     <!-- NOT SHOWN IN DOCS >
       <div>
         <hr>
         Name via form.controls = {{showFormControls(heroForm)}}
       </div>
-     <!-- - -->
+     < -->
+
+     <div class="row">&nbsp;</div>
     </form>
   </div>
 

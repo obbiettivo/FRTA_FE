@@ -1,9 +1,12 @@
-export class Hero {
+export class TassaAuto {
 
   constructor(
     public id: number,
     public name: string,
-    public power: string,
+    public tipoFlusso: string,
+    public statoFlusso: string,
+    public dataInizio: string,
+    public dataFine: string,
     public alterEgo?: string
   ) {  }
 

@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from 'src/app/models/hero';
+import { TassaAuto } from 'src/app/models/tassaAuto';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
 export class HomeComponent  {
+  statoFlussi = ['Generato','Generazione Fallita','Inviato','Invio Fallito'];
+  tipoFlussi = ['Bonifico Bancario','Pagamento diretto con rilascio quietanza'];
 
-  powers = ['Generato','Generazione Fallita','Inviato','Invio Fallito'];
-
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new TassaAuto(18, '', this.statoFlussi[0], this.tipoFlussi[0],'01-01-2000', '31-12-2000');
 
   submitted = false;
 
@@ -19,14 +21,14 @@ export class HomeComponent  {
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); }
 
-  newHero() {
-    this.model = new Hero(42, '', '');
+  TassaAuto() {
+    this.model = new TassaAuto(42,'','','','','');
   }
 
-  skyDog(): Hero {
-    let myHero =  new Hero(42, 'SkyDog','Fetch any object at any distance','Leslie Rollover');
-    console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"
-    return myHero;
+  skyDog(): TassaAuto {
+    let myTassa =  new TassaAuto(42, 'SkyDog','Fetch any object at any distance','Leslie Rollover','','');
+    console.log('Chiamo tassaAuto ' + TassaAuto.name); // "My hero is called SkyDog"
+    return myTassa;
   }
 
   //////// NOT SHOWN IN DOCS ////////
