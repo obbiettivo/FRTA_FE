@@ -6,9 +6,9 @@
 
    <div class="row">
       <div class="form-group" class="col-md-4">
-        <label for="name">ID messaggio SEPA</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"  #name="ngModel">
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger"> Id is required </div>
+        <label for="id">ID messaggio SEPA</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="model.id" name="id"  #id="ngModel">
+        <div [hidden]="id.valid || id.pristine" class="alert alert-danger"> Id is required </div>
       </div>
 
 
@@ -70,21 +70,7 @@
      <button type="submit" class="btn btn-success" [disabled]="!tassaAutoForm.form.valid" (click)="InviaRicerca();" >Cerca</button>
 	      &nbsp;&nbsp;
       <button type="button" class="btn btn-primary" (click)="Pulisci(); tassaAutoForm.reset()">Svuota</button>
-      <!--i>with</i> reset-->
-
       &nbsp;&nbsp;
-      <!--button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
-      <i>without</i> reset
-
-      <div class="row">&nbsp;</div-->	
-
-     <!-- NOT SHOWN IN DOCS >
-      <div>
-        <hr>
-        Name via form.controls = {{showFormControls(heroForm)}}
-      </div>
-     < -->
-
      <div class="row">&nbsp;</div>
     </form>
   </div>

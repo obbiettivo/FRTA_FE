@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { TassaAuto } from 'src/app/models/tassaAuto';
+import { Config,FlussoEsitoService} from 'src/app/services/flusso-esito.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  providers: [ FlussoEsitoService ],
   styleUrls: ['./home.component.css']
 })
 
 
 export class HomeComponent  {
+  [x: string]: any;
   statoFlussi = ['Generato','Generazione Fallita','Inviato','Invio Fallito'];
   tipoFlussi = ['Bonifico Bancario','Pagamento diretto con rilascio quietanza'];
 
-  model = new TassaAuto(0, '', this.statoFlussi[0], this.tipoFlussi[0],'01-01-2020', '31-12-2020');
+ model = new TassaAuto(0, '', this.statoFlussi[0], this.tipoFlussi[0],'01-01-2020', '31-12-2020');
 
+ constructor(private FlussoEsitoService: FlussoEsitoService) {}
+  
   submitted = false;
 
   onSubmit() { this.submitted = true; }
@@ -23,30 +28,28 @@ export class HomeComponent  {
 
   Pulisci() {
     this.model = new TassaAuto(0,'','','','','');
+
   }
 
   InviaRicerca() {
-    alert("invio dati a BeckEnd");
-   
+    alert("invio dati a BeckEnd");  
     console.log(this.model);
 
+    this.FlussoEsitoService.getConfig().subscribe(
+      (data: Config) => this.config = { ...data }, // success path
+       error => this.error = error // error path
+    );
+    
+
   }
-  /*skyDog(): TassaAuto {
-    let myTassa =  new TassaAuto(42, 'SkyDog','Fetch any object at any distance','Leslie Rollover','','');
-    console.log('Chiamo tassaAuto ' + TassaAuto.name); // "My hero is called SkyDog"
-    return myTassa;
-  }*/
 
-  //////// NOT SHOWN IN DOCS ////////
 
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
+
   showFormControls(form: any) {
     return form && form.controls['name'] &&
     form.controls['name'].value; // Dr. IQ
   }
 
-  /////////////////////////////
 
 }
 

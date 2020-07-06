@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +12,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FormsModule }   from '@angular/forms';
-
-
-
 import { NavService} from './services/nav.service'; 
+import { FlussoEsitoService} from './services/flusso-esito.service'; 
+
 
 @NgModule({
   declarations: [
@@ -26,12 +26,13 @@ import { NavService} from './services/nav.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [NavService],
+  providers: [NavService,FlussoEsitoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
