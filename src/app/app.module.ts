@@ -14,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule }   from '@angular/forms';
 import { NavService} from './services/nav.service'; 
 import { FlussoEsitoService} from './services/flusso-esito.service'; 
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { FlussoEsitoService} from './services/flusso-esito.service';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [NavService,FlussoEsitoService],
   bootstrap: [AppComponent]
